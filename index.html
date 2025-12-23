@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドライバー募集 | アシスト運送サービス</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; color: #f8f8f8; background-color: #0a0a0a; overflow-x: hidden; }
+        .bg-dark-panel { background-color: #161616; }
+        .btn-luxury { background: #ffffff; color: #000000; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border: 1px solid #ffffff; cursor: pointer; }
+        .btn-luxury:hover { background: transparent; color: #ffffff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,255,255,0.1); }
+        .scroll-reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+        .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+        .income-card { background: linear-gradient(145deg, #1f1f1f, #111111); border: 1px solid #2a2a2a; }
+        .hero-overlay { background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%); }
+        #qrcode img { margin: 0 auto; padding: 10px; background: white; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="w-10 h-[1px] bg-white mr-3"></div>
+                    <span class="text-lg font-black tracking-widest">アシスト運送サービス</span>
+                </div>
+                <div>
+                    <a href="#contact" class="btn-luxury px-6 py-2 rounded-sm text-xs font-bold tracking-widest uppercase">Entry</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2075&auto=format&fit=crop" class="w-full h-full object-cover grayscale brightness-50" alt="Professional Courier">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="lg:w-3/5 animate__animated animate__fadeIn">
+                <div class="flex items-center space-x-2 mb-6 text-white/60 tracking-[.4em] text-xs uppercase">Assisting Your Future</div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
+                    運ぶのは、<br>未来への信頼。
+                </h1>
+                <p class="text-gray-300 text-lg mb-12 leading-relaxed max-w-xl font-light">
+                    アシスト運送サービスでは、新しい仲間を募集しています。<br>
+                    20代から70代まで、一人ひとりのライフスタイルに寄り添った「働き方」を私たちがアシストします。
+                </p>
+                <a href="#contact" class="btn-luxury px-12 py-5 font-bold text-center tracking-widest inline-block">採用情報を詳しく見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earnings Model Section -->
+    <section id="income" class="py-32 bg-[#050505]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-reveal">
+                <h2 class="text-xs tracking-[0.5em] text-gray-500 mb-6 uppercase">Earnings Model</h2>
+                <h3 class="text-4xl font-bold">収益に関するご案内</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="income-card p-12 scroll-reveal">
+                    <h4 class="text-xl font-bold mb-10">本格稼働モデル</h4>
+                    <div class="flex items-baseline mb-8">
+                        <span class="text-xs text-gray-400 mr-4">月収目安</span>
+                        <span class="text-5xl font-black mr-2 text-white">40〜60</span>
+                        <span class="text-lg font-bold">万円以上</span>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed italic">※週5〜6日、高単価案件中心の稼働例です。</p>
+                </div>
+                <div class="income-card p-12 scroll-reveal" style="transition-delay: 0.2s;">
+                    <h4 class="text-xl font-bold mb-10">ライフバランスモデル</h4>
+                    <div class="flex items-baseline mb-8">
+                        <span class="text-xs text-gray-400 mr-4">月収目安</span>
+                        <span class="text-5xl font-black mr-2 text-white">15〜25</span>
+                        <span class="text-lg font-bold">万円程度</span>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed italic">※週3〜4日、時短やルート配送中心の稼働例です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Tools (Remove this section after generating your QR for flyers) -->
+    <section class="py-20 bg-dark-panel border-y border-white/10">
+        <div class="max-w-xl mx-auto px-4 text-center">
+            <h3 class="text-lg font-bold mb-8 tracking-widest uppercase">チラシ用QRコードの生成</h3>
+            <div class="bg-white p-10 rounded-3xl text-black shadow-2xl">
+                <div id="qrcode" class="mb-8 flex justify-center"></div>
+                <input type="text" id="url-input" placeholder="https://[ユーザー名].github.io/assist-transport/" class="w-full bg-gray-100 p-4 rounded-xl text-sm outline-none mb-4">
+                <button onclick="generateQR()" class="w-full bg-black text-white py-4 rounded-xl font-bold text-xs tracking-widest uppercase">QRコードを更新</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-white text-black">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-black mb-12 tracking-tighter">アシスト運送サービスで、<br>新しい一歩を。</h3>
+            <form class="space-y-4 text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" placeholder="お名前" class="w-full bg-gray-100 p-6 outline-none text-sm tracking-widest">
+                    <input type="tel" placeholder="電話番号" class="w-full bg-gray-100 p-6 outline-none text-sm tracking-widest">
+                </div>
+                <button type="submit" class="w-full bg-black text-white py-6 font-bold tracking-[0.4em] uppercase">お問い合わせ</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black text-center text-gray-600 text-[10px] tracking-widest">
+        &copy; 2024 ASSIST TRANSPORT SERVICE.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        let qrcode = new QRCode(document.getElementById("qrcode"), { width: 180, height: 180 });
+        function generateQR() {
+            let url = document.getElementById("url-input").value;
+            if (url) qrcode.makeCode(url);
+        }
+        window.onload = generateQR;
+    </script>
+</body>
+</html>
