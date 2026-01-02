@@ -20,7 +20,8 @@
         .scroll-reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
         .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
         .income-card { background: linear-gradient(145deg, #1f1f1f, #111111); border: 1px solid #2a2a2a; }
-        .feature-card { border-left: 2px solid #ffffff; padding-left: 1.5rem; }
+        .feature-card { border-left: 2px solid #ffffff; padding-left: 1.5rem; transition: all 0.5s ease; }
+        .feature-card:hover { border-left-width: 6px; background: rgba(255,255,255,0.02); }
         .hero-overlay { background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%); }
         #qrcode img { margin: 0 auto; padding: 10px; background: white; border-radius: 8px; }
     </style>
@@ -35,7 +36,7 @@
                     <span class="text-lg font-black tracking-widest">アシスト運送サービス</span>
                 </div>
                 <div>
-                    <a href="#contact" class="btn-luxury px-6 py-2 rounded-sm text-xs font-bold tracking-widest uppercase">Contact</a>
+                    <a href="#contact" class="btn-luxury px-6 py-2 rounded-sm text-xs font-bold tracking-widest">お問い合わせ</a>
                 </div>
             </div>
         </div>
@@ -49,7 +50,7 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="lg:w-3/5 animate__animated animate__fadeIn">
-                <div class="flex items-center space-x-2 mb-6 text-white/60 tracking-[.4em] text-xs uppercase text-gradient">Assisting Your Future</div>
+                <div class="flex items-center space-x-2 mb-6 text-white/60 tracking-[.4em] text-xs uppercase">Assisting Your Future</div>
                 <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
                     運ぶのは、<br>未来への信頼。
                 </h1>
@@ -67,25 +68,32 @@
     <!-- Support/Features -->
     <section class="py-32 bg-dark-panel">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 scroll-reveal">
+                <h2 class="text-xs tracking-[0.5em] text-gray-500 mb-6 uppercase">Our Support</h2>
+                <h3 class="text-3xl font-bold">安心のサポート体制</h3>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div class="scroll-reveal feature-card">
-                    <h3 class="text-xs tracking-widest text-gray-500 mb-4 uppercase">Support 01</h3>
-                    <h4 class="text-xl font-bold mb-6">充実の同乗研修</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                <!-- 特徴 01 -->
+                <div class="scroll-reveal feature-card py-4">
+                    <h3 class="text-xs tracking-widest text-gray-500 mb-6 uppercase">Support 01</h3>
+                    <h4 class="text-2xl font-bold mb-8">充実の同乗研修</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">
                         最初の3日間はベテランが横に乗ります。配送ルートの組み方から納品時のマナーまでマンツーマンで教えるので、未経験の方も安心してください。
                     </p>
                 </div>
-                <div class="scroll-reveal feature-card" style="transition-delay: 0.2s;">
-                    <h3 class="text-xs tracking-widest text-gray-500 mb-4 uppercase">Support 02</h3>
-                    <h4 class="text-xl font-bold mb-6">初期費用ゼロで開始</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                <!-- 特徴 02 -->
+                <div class="scroll-reveal feature-card py-4" style="transition-delay: 0.2s;">
+                    <h3 class="text-xs tracking-widest text-gray-500 mb-6 uppercase">Support 02</h3>
+                    <h4 class="text-2xl font-bold mb-8">初期費用ゼロで開始</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">
                         加盟金や保証金は一切不要。車両リース制度もあり、手出し資金ゼロで明日からでもスタートできる環境を整えています。
                     </p>
                 </div>
-                <div class="scroll-reveal feature-card" style="transition-delay: 0.4s;">
-                    <h3 class="text-xs tracking-widest text-gray-500 mb-4 uppercase">Support 03</h3>
-                    <h4 class="text-xl font-bold mb-6">IT・スマホサポート</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                <!-- 特徴 03 -->
+                <div class="scroll-reveal feature-card py-4" style="transition-delay: 0.4s;">
+                    <h3 class="text-xs tracking-widest text-gray-500 mb-6 uppercase">Support 03</h3>
+                    <h4 class="text-2xl font-bold mb-8">IT・スマホサポート</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">
                         専用アプリの使い方から、効率的な配送方法まで丁寧にサポート。デジタル操作に不安がある年配の方も、多く活躍されています。
                     </p>
                 </div>
@@ -93,31 +101,33 @@
         </div>
     </section>
 
-    <!-- Earnings -->
+    <!-- Earnings/Remuneration -->
     <section id="income" class="py-32 bg-[#050505]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 scroll-reveal">
-                <h2 class="text-xs tracking-[0.5em] text-gray-500 mb-6 uppercase">Earnings Model</h2>
+                <h2 class="text-xs tracking-[0.5em] text-gray-500 mb-6 uppercase">Remuneration</h2>
                 <h3 class="text-4xl font-bold">報酬に関するご案内</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- モデル 01 -->
                 <div class="income-card p-12 scroll-reveal">
-                    <h4 class="text-xl font-bold mb-10 text-white">しっかり稼ぎたい方</h4>
+                    <h4 class="text-xl font-bold mb-10 text-white">高収入を目指す働き方</h4>
                     <div class="flex items-baseline mb-8">
                         <span class="text-xs text-gray-400 mr-4">月収目安</span>
                         <span class="text-5xl font-black mr-2 text-white">40〜60</span>
                         <span class="text-lg font-bold text-white">万円以上</span>
                     </div>
-                    <p class="text-xs text-gray-500 leading-relaxed italic font-light">※週5〜6日、高単価案件中心の稼働例です。</p>
+                    <p class="text-xs text-gray-500 leading-relaxed italic font-light">※週5〜6日、高単価案件中心の稼働例です。効率次第でそれ以上も可能です。</p>
                 </div>
+                <!-- モデル 02 -->
                 <div class="income-card p-12 scroll-reveal" style="transition-delay: 0.2s;">
-                    <h4 class="text-xl font-bold mb-10 text-white">ライフバランスモデル</h4>
+                    <h4 class="text-xl font-bold mb-10 text-white">ワークライフインテグレーション</h4>
                     <div class="flex items-baseline mb-8">
                         <span class="text-xs text-gray-400 mr-4">月収目安</span>
                         <span class="text-5xl font-black mr-2 text-white">10〜25</span>
                         <span class="text-lg font-bold text-white">万円程度</span>
                     </div>
-                    <p class="text-xs text-gray-500 leading-relaxed italic font-light">※週3〜4日、時短やルート配送中心の稼働例です。</p>
+                    <p class="text-xs text-gray-500 leading-relaxed italic font-light">※週3〜4日、時短やルート配送中心の稼働例です。自分らしく働きたい方に最適です。</p>
                 </div>
             </div>
         </div>
@@ -126,12 +136,12 @@
     <!-- QR Tools -->
     <section class="py-20 bg-dark-panel border-y border-white/10">
         <div class="max-w-xl mx-auto px-4 text-center">
-            <h3 class="text-lg font-bold mb-8 tracking-widest uppercase">チラシ用QRコードの生成</h3>
+            <h3 class="text-lg font-bold mb-8 tracking-widest uppercase text-white/40">チラシ用QRコードの生成</h3>
             <div class="bg-white p-10 rounded-3xl text-black shadow-2xl">
                 <div id="qrcode" class="mb-8 flex justify-center"></div>
-                <!-- 確定したGitHub PagesのURLを初期値としてセット -->
+                <!-- GitHub PagesのURLを初期値としてセット -->
                 <input type="text" id="url-input" value="https://assistunsoservice-bit.github.io/recruit/" class="w-full bg-gray-100 p-4 rounded-xl text-sm outline-none mb-4">
-                <button onclick="generateQR()" class="w-full bg-black text-white py-4 rounded-xl font-bold text-xs tracking-widest uppercase">QRコードを更新</button>
+                <button onclick="generateQR()" class="w-full bg-black text-white py-4 rounded-xl font-bold text-xs tracking-widest uppercase hover:bg-gray-800 transition">QRコードを更新</button>
             </div>
         </div>
     </section>
@@ -139,6 +149,7 @@
     <!-- Instagram Contact Section -->
     <section id="contact" class="py-32 bg-white text-black">
         <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="text-xs tracking-[0.5em] text-gray-400 mb-6 uppercase">Contact</h2>
             <h3 class="text-4xl font-black mb-8 tracking-tighter">お問い合わせ・ご応募</h3>
             <p class="text-gray-500 mb-12 font-light leading-relaxed">
                 アシスト運送サービスへのご質問やご応募は、<br>
@@ -180,11 +191,13 @@
     </footer>
 
     <script>
+        // スクロールアニメーション
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
+        // QRコード生成
         let qrcode = new QRCode(document.getElementById("qrcode"), { width: 180, height: 180 });
         function generateQR() {
             let url = document.getElementById("url-input").value;
