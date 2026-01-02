@@ -20,6 +20,7 @@
         .scroll-reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
         .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
         .income-card { background: linear-gradient(145deg, #1f1f1f, #111111); border: 1px solid #2a2a2a; }
+        .feature-card { border-left: 2px solid #ffffff; padding-left: 1.5rem; }
         .hero-overlay { background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%); }
         #qrcode img { margin: 0 auto; padding: 10px; background: white; border-radius: 8px; }
     </style>
@@ -56,7 +57,38 @@
                     アシスト運送サービスでは、新しい仲間を募集しています。<br>
                     20代から70代まで、一人ひとりのライフスタイルを私たちがアシストします。
                 </p>
-                <a href="#contact" class="btn-luxury px-12 py-5 font-bold text-center tracking-widest inline-block">採用情報を詳しく見る</a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="btn-luxury px-12 py-5 font-bold text-center tracking-widest inline-block">採用情報を詳しく見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support/Features -->
+    <section class="py-32 bg-dark-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="scroll-reveal feature-card">
+                    <h3 class="text-xs tracking-widest text-gray-500 mb-4 uppercase">Support 01</h3>
+                    <h4 class="text-xl font-bold mb-6">充実の同乗研修</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        最初の3日間はベテランが横に乗ります。配送ルートの組み方から納品時のマナーまでマンツーマンで教えるので、未経験の方も安心してください。
+                    </p>
+                </div>
+                <div class="scroll-reveal feature-card" style="transition-delay: 0.2s;">
+                    <h3 class="text-xs tracking-widest text-gray-500 mb-4 uppercase">Support 02</h3>
+                    <h4 class="text-xl font-bold mb-6">初期費用ゼロで開始</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        加盟金や保証金は一切不要。車両リース制度もあり、手出し資金ゼロで明日からでもスタートできる環境を整えています。
+                    </p>
+                </div>
+                <div class="scroll-reveal feature-card" style="transition-delay: 0.4s;">
+                    <h3 class="text-xs tracking-widest text-gray-500 mb-4 uppercase">Support 03</h3>
+                    <h4 class="text-xl font-bold mb-6">IT・スマホサポート</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed font-light">
+                        専用アプリの使い方から、効率的な配送方法まで丁寧にサポート。デジタル操作に不安がある年配の方も、多く活躍されています。
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -97,7 +129,8 @@
             <h3 class="text-lg font-bold mb-8 tracking-widest uppercase">チラシ用QRコードの生成</h3>
             <div class="bg-white p-10 rounded-3xl text-black shadow-2xl">
                 <div id="qrcode" class="mb-8 flex justify-center"></div>
-                <input type="text" id="url-input" placeholder="https://[ユーザー名].github.io/assist-transport/" class="w-full bg-gray-100 p-4 rounded-xl text-sm outline-none mb-4">
+                <!-- 確定したGitHub PagesのURLを初期値としてセット -->
+                <input type="text" id="url-input" value="https://assistunsoservice-bit.github.io/recruit/" class="w-full bg-gray-100 p-4 rounded-xl text-sm outline-none mb-4">
                 <button onclick="generateQR()" class="w-full bg-black text-white py-4 rounded-xl font-bold text-xs tracking-widest uppercase">QRコードを更新</button>
             </div>
         </div>
@@ -161,4 +194,3 @@
     </script>
 </body>
 </html>
-
